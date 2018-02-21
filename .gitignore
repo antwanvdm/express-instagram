@@ -1,0 +1,10 @@
+# Default
+*~
+.DS_Store
+.idea
+
+# Project
+node_modules
+.env
+style.css
+style.css.map

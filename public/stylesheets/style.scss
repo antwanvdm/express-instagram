@@ -1,0 +1,20 @@
+// 1. Import the initial variables
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+
+$section-padding: 0.5rem 0.5rem;
+$section-padding-medium: 9rem 1.5rem;
+$section-padding-large: 18rem 1.5rem;
+
+@import "../../node_modules/bulma/bulma";
+
+.image-grid {
+  text-align: center;
+
+  figure {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+}
