@@ -29,12 +29,12 @@ MongoClient.connect(MongoUrl, (error, db) => {
   app.use(bodyParser.urlencoded({extended: false}));
   app.use(cookieParser());
   app.use(sassMiddleware({
-    src: path.join(__dirname, 'public'),
-    dest: path.join(__dirname, 'public'),
+    src: path.join(__dirname, '../public'),
+    dest: path.join(__dirname, '../public'),
     indentedSyntax: false, // true = .sass and false = .scss
     sourceMap: true
   }));
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(path.join(__dirname, '../public')));
 
   app.use('/', index);
   app.use('/instagram', instagram(db));
