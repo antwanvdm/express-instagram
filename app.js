@@ -1,6 +1,5 @@
 let express = require('express');
 let path = require('path');
-let favicon = require('serve-favicon');
 let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
@@ -25,7 +24,6 @@ MongoClient.connect(MongoUrl, (error, db) => {
   app.set('view engine', 'hbs');
 
   // uncomment after placing your favicon in /public
-  app.use(favicon(path.join(__dirname, 'public', 'images/favicons/favicon.ico')));
   app.use(logger('dev'));
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended: false}));
