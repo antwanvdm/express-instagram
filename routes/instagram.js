@@ -16,7 +16,7 @@ module.exports = (db) => {
     let tagQuery = currentTag !== "" ? {tags: {$in: [currentTag]}} : {};
 
     //Get all results from collection
-    collection.find(tagQuery).sort({created: 1}).toArray(function (err, docs) {
+    collection.find(tagQuery).sort({created_time: -1}).toArray(function (err, docs) {
       response.render('instagram', {title: 'Instagram Grid', posts: docs, currentTag: currentTag});
     });
   });
